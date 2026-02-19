@@ -1,0 +1,38 @@
+<div class="component">
+    <div class="form">
+        <h2>Nueva Noticia</h2>
+        <div class="fieldForm">
+            <div class="field">
+                <label for="title">Título de la Noticia</label>
+                <input type="text" id="title" placeholder="Inserte aquí el título de la noticia...">
+            </div>
+            <div class="field">
+                <label for="url">Imagen(url de la Fotografía)</label>
+                <input type="url" id="url" placeholder="https://ejemplo.com/fotoMuestra.png">
+            </div>
+            <div class="field">
+                <label for="text">Cuerpo de la Noticia</label>
+                <textarea id="text" placeholder="Escriba aquí el cuerpo de la noticia..."></textarea>
+            </div>
+            <div class="field">
+                <label for="date">Fecha de Publicación</label>
+                <input type="date" id="date" placeholder="dd/mm/YYYY">
+            </div>
+        </div>
+        <button class="button">Publicar Noticia</button>
+    </div>
+    <div class="news">
+        <h2>Listado de Noticias</h2>
+        <div class="eachNew">
+            @for(noticia of arrayNoticias; track noticia.titulo){
+            <div class="new">
+                <img src="{{noticia.urlImagen}}"
+                    alt="Imagen de la noticia">
+                <h3>{{noticia.titulo}}</h3>
+                <span>{{noticia.fecha}}</span>
+                <p>{{noticia.contenido}}</p>    
+            </div>
+            }
+        </div>
+    </div>
+</div>
