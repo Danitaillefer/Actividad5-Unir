@@ -4,22 +4,22 @@
         <div class="fieldForm">
             <div class="field">
                 <label for="title">Título de la Noticia</label>
-                <input type="text" id="title" placeholder="Inserte aquí el título de la noticia...">
+                <input type="text" id="title"  placeholder="Inserte aquí el título de la noticia..." [(ngModel)]="noticia.titulo">
             </div>
             <div class="field">
                 <label for="url">Imagen(url de la Fotografía)</label>
-                <input type="url" id="url" placeholder="https://ejemplo.com/fotoMuestra.png">
+                <input type="url" id="url" placeholder="https://ejemplo.com/fotoMuestra.png" [(ngModel)]="noticia.urlImagen">
             </div>
             <div class="field">
                 <label for="text">Cuerpo de la Noticia</label>
-                <textarea id="text" placeholder="Escriba aquí el cuerpo de la noticia..."></textarea>
+                <textarea id="text" placeholder="Escriba aquí el cuerpo de la noticia..." [(ngModel)]="noticia.contenido"></textarea>
             </div>
             <div class="field">
                 <label for="date">Fecha de Publicación</label>
-                <input type="date" id="date" placeholder="dd/mm/YYYY">
+                <input type="date" id="date" placeholder="dd/mm/YYYY" [(ngModel)]="noticia.fecha">
             </div>
         </div>
-        <button class="button">Publicar Noticia</button>
+        <button class="button" (click)="guardarNoticia()">Publicar Noticia</button>
     </div>
     <div class="news">
         <h2>Listado de Noticias</h2>
